@@ -61,3 +61,18 @@ function arrayOperation(p1, p2) {
 }
 let x = arrayOperation(arr, "odd");
 console.log(x);
+
+
+function optimisedArrayOperation(arr, op) {
+  const arr1 = []
+
+  if(!arr.length) return 'The array is empty'
+
+  for (let i = 0; i < arr.length; i++) {
+    
+  }
+
+
+  return arr1
+
+}
