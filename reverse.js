@@ -64,15 +64,32 @@ console.log(x);
 
 
 function optimisedArrayOperation(arr, op) {
-  const arr1 = []
+  const newArr = []
 
   if(!arr.length) return 'The array is empty'
 
   for (let i = 0; i < arr.length; i++) {
-    
+    if(op === 'even' && arr[i] % 2 === 0) {
+      newArr.push(arr[i])
+    }
+
+    if(op === 'odd' && arr[i] % 2 !== 0) {
+      newArr.push(arr[i])
+    }
+
   }
 
+  if(newArr.length) return newArr
 
-  return arr1
-
+  if(op === 'even' && !newArr.length) {
+    return 'No even numbers found'
+  } else {
+    return 'No odd numbers found'
+  }
 }
+
+const array = [2, 4, 6]
+const operation = 'odd'
+
+
+console.log(optimisedArrayOperation(array, operation))
