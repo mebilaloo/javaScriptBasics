@@ -29,38 +29,38 @@
 // if the operation is "oddNumbers" and there are no odd numbers in the array, return "No odd numbers found".
 // if the operation is "evenNumbers" and there are no even numbers in the array, return "No even numbers found".
 
-const arr=[2,4,6,8,9];
-function arrayOperation(p1, p2) {
-  let oddFlag = false;
-  let evenFlag = false;
-  const arr1 = [];
-  if (p1.length === 0) {
-    return "The array is empty";
-  } else if (p2 === "even") {
-    for (let i = 0; i < p1.length; i++) {
-      if (p1[i] % 2 === 0) {
-        evenFlag = true;
-        arr1.push(p1[i]);
-      }
-    }
-    if (evenFlag === false) {
-      return "No even numbers found";
-    }
-  } else if (p2 === "odd") {
-    for (let i = 0; i < p1.length; i++) {
-      if (p1[i] % 2 != 0) {
-        oddFlag = true;
-        arr1.push(p1[i]);
-      }
-    }
-    if (oddFlag === false) {
-      return "No odd numbers found";
-    }
-  }
-  return arr1;
-}
-let x = arrayOperation(arr, "odd");
-console.log(x);
+// const arr=[2,4,6,8,9];
+// function arrayOperation(p1, p2) {
+//   let oddFlag = false;
+//   let evenFlag = false;
+//   const arr1 = [];
+//   if (p1.length === 0) {
+//     return "The array is empty";
+//   } else if (p2 === "even") {
+//     for (let i = 0; i < p1.length; i++) {
+//       if (p1[i] % 2 === 0) {
+//         evenFlag = true;
+//         arr1.push(p1[i]);
+//       }
+//     }
+//     if (evenFlag === false) {
+//       return "No even numbers found";
+//     }
+//   } else if (p2 === "odd") {
+//     for (let i = 0; i < p1.length; i++) {
+//       if (p1[i] % 2 != 0) {
+//         oddFlag = true;
+//         arr1.push(p1[i]);
+//       }
+//     }
+//     if (oddFlag === false) {
+//       return "No odd numbers found";
+//     }
+//   }
+//   return arr1;
+// }
+// let x = arrayOperation(arr, "odd");
+// console.log(x);
 
 
 function optimisedArrayOperation(arr, op) {
@@ -81,15 +81,13 @@ function optimisedArrayOperation(arr, op) {
 
   if(newArr.length) return newArr
 
-  if(op === 'even' && !newArr.length) {
-    return 'No even numbers found'
-  } else {
-    return 'No odd numbers found'
-  }
+  if(op === 'even' && !newArr.length) return 'No even numbers found'
+
+  return 'No odd numbers found'
 }
 
 const array = [2, 4, 6]
-const operation = 'odd'
+const operation = 'even'
 
 
 console.log(optimisedArrayOperation(array, operation))
