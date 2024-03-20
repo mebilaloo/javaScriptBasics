@@ -87,7 +87,7 @@ function optimisedArrayOperation(arr, op) {
 }
 
 const array = [2, 4, 6]
-const operation = 'even'
+const operation = 'odd'
 
 
 console.log(optimisedArrayOperation(array, operation))
